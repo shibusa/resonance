@@ -1,0 +1,40 @@
+* {
+  margin:0px;
+  padding:0px;
+  font-family: sans-serif;
+  font-size:12px;
+}
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+#map {
+    height: 50%;
+    width:auto;
+}
+
+#floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+}
+
+td, th{
+  width:130px;
+  text-align: left;
+}
+
+tr {
+    height:20px;
+}

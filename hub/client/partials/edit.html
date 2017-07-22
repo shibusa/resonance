@@ -1,0 +1,9 @@
+<div ng-controller="mainController">
+    <form>
+        <label>Location: </label><input ng-model='site.location' type="text" required>
+        <label>IP Address: </label><input ng-model='site.ip' type="text" required>
+        <label>Interval/Sec: </label><input ng-model='site.interval' type="text" required>
+        <label>Status: </label><select ng-model='site.status' ng-options="val for val in statusList" required></select>
+        <input type="submit" value='Update' ng-click='editLocation(site._id)'>
+    </form>
+</div>

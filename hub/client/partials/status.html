@@ -1,0 +1,15 @@
+<div ng-controller="mainController">
+  <input type="text" placeholder="Filter" ng-model="filter_location">
+  <table>
+    <tr>
+      <th>Location</th>
+      <th>IP Address</th>
+      <th>Status</th>
+    </tr>
+    <tr ng-repeat='site in sites | filter: filter_location '>
+      <td>{{site.location}}</td>
+      <td>{{site.ip}}</td>
+      <td>{{site.status}}</td>
+    </tr>
+  </table>
+</div>

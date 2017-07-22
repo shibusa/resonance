@@ -1,0 +1,24 @@
+<div ng-controller="mainController">
+  <form name='newform' ng-submit='addLocation()'>
+    <input type="text" placeholder="Location" ng-model='newSite.location' required>
+    <input type="text" placeholder="IP Address" ng-model='newSite.ip' required>
+    <input type="text" placeholder="Interval in Seconds" ng-model='newSite.interval' required>
+    <input type="submit" value="Add">
+  </form>
+  <table>
+    <tr>
+      <th>Location</th>
+      <th>IP Address</th>
+      <th>Interval</th>
+      <th>Status</th>
+      <th>Additional Actions</th>
+    </tr>
+    <tr ng-repeat='site in sites'>
+      <td>{{site.location}}</td>
+      <td>{{site.ip}}</td>
+      <td>Every {{site.interval}} seconds</td>
+      <td>{{site.status}}</td>
+      <td><a href='#/edit/{{site._id}}'>Edit</a> | <a href='' ng-click="deleteLocation(site._id)">Delete</a></td>
+    </tr>
+  </table>
+</div>
